@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shibaguette Inu's Journey</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Explore Shibaguette Inu's Journey Across France</h1>
+    <a href="index.html" class="button">Back to Home</a>
+  </header>
+  <main>
+    <section id="map-container">
+      <h2 class="map-title">🌍 Interactive French Tour</h2>
+      <div class="map-container">
+        <!-- Map Image -->
+        <img src="https://i.imgur.com/NjsAZEa.png" alt="France Map" class="map-image">
+
+        <!-- Flags repositionnés -->
+        <span class="flag" style="top: 28%; left: 52%;" onclick="showGallery('paris')">🥖</span> <!-- Paris -->
+        <span class="flag" style="top: 55%; left: 68%;" onclick="showGallery('lyon')">🥖</span> <!-- Lyon -->
+        <span class="flag" style="top: 82%; left: 46%;" onclick="showGallery('toulouse')">🥖</span> <!-- Toulouse -->
+        <span class="flag" style="top: 70%; left: 36%;" onclick="showGallery('bordeaux')">🥖</span> <!-- Bordeaux -->
+        <span class="flag" style="top: 85%; left: 83%;" onclick="showGallery('nice')">🥖</span> <!-- Nice -->
+        <span class="flag" style="top: 80%; left: 67%;" onclick="showGallery('marseille')">🥖</span> <!-- Marseille -->
+      </div>
+    </section>
+  </main>
+
+ <!-- Lightbox Modal for Gallery -->
+<div id="gallery-modal" class="gallery-modal" style="display: none;">
+  <div class="gallery-content">
+    <button class="close-button" onclick="closeGallery()">✖</button>
+    <img id="gallery-image" src="" alt="Gallery Image" style="display: none;"> <!-- Affiche les mèmes -->
+    <p id="gallery-message" style="display: none;">🚧 Stay Tuned: The journey for this city will start soon!</p> <!-- Message pour les autres villes -->
+    <div class="gallery-controls">
+      <button onclick="prevImage()">⬅</button>
+      <button onclick="nextImage()">➡</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

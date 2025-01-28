@@ -1,0 +1,673 @@
+ /* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  background: linear-gradient(to bottom, #ff9800, #ffc107);
+  padding: 20px 0;
+}
+
+.banner-img {
+  max-width: 90%; /* Réduit la largeur à 90% de l'écran */
+  height: auto; /* Garde les proportions */
+  border: 5px solid #ff8c00; /* Ajoute une bordure orange */
+  border-radius: 20px; /* Arrondit les coins pour un rendu plus esthétique */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour donner de la profondeur */
+  margin: 20px auto; /* Centrage avec un espacement */
+  display: block; /* Pour garantir le centrage horizontal */
+}
+
+
+.logo-img {
+  width: 150px;
+  margin: 10px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button,
+.download-button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none; /* Retirer le soulignement pour les liens */
+  display: inline-block;
+  font-weight: bold; /* Ajouté ici pour les rendre en gras */
+}
+
+button:hover,
+.download-button:hover {
+  background: #e64a19;
+}
+.button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e67e00;
+}
+
+.how-to-join-section {
+  background-color: #fff8e1;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.how-to-join-section h2 {
+  color: #ff8c00;
+  text-align: center;
+  font-size: 24px;
+}
+
+.how-to-join-section ol {
+  margin: 20px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.how-to-join-section li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.how-to-join-section a {
+  color: #ff8c00;
+  text-decoration: underline;
+}
+
+.how-to-join-section a:hover {
+  color: #e67e00;
+}
+
+.footer {
+  text-align: center;
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+
+#newsletter {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  background: #fff3e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#newsletter h2 {
+  color: #ff5722;
+}
+
+#newsletter input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#newsletter button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#newsletter button:hover {
+  background: #e64a19;
+}
+
+#confirmation-message {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+/* Milestones Section */
+.milestones {
+  background: #fff3e0;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: left;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.milestones h3 {
+  color: #ff5722;
+  text-align: center;
+}
+
+.milestones ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.milestones li {
+  margin-bottom: 10px;
+}
+
+/* Social Media Section */
+.social-section {
+  text-align: center;
+  padding: 20px;
+  background: #ffe0b2;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.contract-address {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #e64a19;
+  text-align: center;
+}
+
+/* Styles pour la page Journey */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5722;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #e64a19;
+}
+
+/* Conteneur de la carte */
+.map-container {
+  position: relative;
+  width: 50%; /* Réduire la taille de la carte à 50% de la largeur de l'écran */
+  margin: 20px auto; /* Centrer la carte horizontalement */
+  text-align: center;
+}
+
+/* Image de la carte */
+.map-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Position des flags */
+.flag {
+  position: absolute;
+  font-size: 24px; /* Taille des drapeaux */
+  cursor: pointer;
+  transform: translate(-50%, -50%); /* Centrer le flag précisément */
+}
+
+.flag:hover {
+  color: red; /* Effet hover pour rendre le drapeau interactif */
+}
+
+/* Titre de la carte */
+.map-title {
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.leaflet-popup-content img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+/* Styles des boutons */
+.button {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: #e64a19;
+}        
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5722;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #e64a19;
+}
+
+
+.flag {
+  position: absolute;
+  font-size: 24px;
+  cursor: pointer;
+  transform: translate(-50%, -50%); /* Centre l'emoji */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Donne un effet de relief */
+}
+
+.flag:hover {
+  transform: translate(-50%, -50%) scale(1.2); /* Agrandit l'emoji au survol */
+}
+
+.button-container-center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.button-container-center .button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container-center .button:hover {
+  background-color: #e67e00;
+}
+
+/* Galerie modale */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.gallery-content {
+  position: relative;
+  max-width: 600px;
+  width: 80%;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.gallery-content img {
+  max-width: 100%;
+  max-height: 400px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #e64a19;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.gallery-controls button {
+  background-color: #ff8c00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery-controls button:hover {
+  background-color: #e67e00;
+}
+
+/* Style pour le bouton de fermeture dans le pop-up */
+.close-button {
+  position: absolute;
+  top: 10px; /* Ajuste la position pour l'éloigner du contenu */
+  right: 10px; /* Positionné à droite */
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%; /* Bouton rond */
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Assure qu'il est au-dessus des autres éléments */
+}
+
+.close-button:hover {
+  background-color: #e64a19; /* Couleur au survol */
+}
+
+/* Pour assurer la compatibilité mobile */
+@media (max-width: 768px) {
+  .close-button {
+    padding: 8px; /* Réduit un peu la taille sur mobile */
+    font-size: 14px;
+  }
+}
+
+/* Style des boutons */
+.button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e67e00;
+}
+
+/* Harmonisation des boutons */
+.button,
+.download-button {
+  background-color: #ff5722; /* Fond rouge */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold; /* Texte en gras */
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button:hover,
+.download-button:hover {
+  background-color: #e64a19; /* Rouge foncé au survol */
+}
+
+/* Boutons dans les conteneurs spécifiques */
+.button-container-center .button {
+  background-color: #ff5722; /* Fond rouge uniformisé */
+}
+
+.button-container-center .button:hover {
+  background-color: #e64a19; /* Rouge foncé au survol */
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  background-color: #fff8e1; /* Light yellow */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tokenomics-section h2 {
+  color: #ff8c00; /* Orange */
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.tokenomics-section ul {
+  margin: 20px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.tokenomics-section li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tokenomics-section a {
+  color: #ff8c00;
+  text-decoration: underline;
+}
+
+.tokenomics-section a:hover {
+  color: #e67e00;
+}
+
+/* Style pour le bouton Back to Home */
+.tokenomics-section .back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #ff5722, #e64a19); /* Dégradé rouge/orange */
+  border: none;
+  border-radius: 8px; /* Coins arrondis */
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.tokenomics-section .back-button:hover {
+  background: linear-gradient(to bottom, #e64a19, #d84315); /* Dégradé légèrement plus foncé */
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+ 
+
+/* Descendre le texte de Tokenomics */
+.tokenomics-content {
+  margin-top: 20px; /* Ajoute un espace sous le bouton */
+}
+
+/* Optimisation des boutons pour mobile */
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
+  justify-content: center;
+  gap: 10px; /* Réduit l'écart entre les boutons pour mobile */
+}
+
+.button {
+  flex: 1 1 calc(25% - 10px); /* Chaque bouton prend 25% de largeur moins l'espacement */
+  max-width: 150px; /* Limite la largeur maximale des boutons */
+  min-width: 100px; /* Assure une taille minimale lisible */
+  padding: 10px 5px; /* Ajuste les marges pour une apparence cohérente */
+}
+
+@media (max-width: 768px) {
+  /* Styles spécifiques pour mobile */
+  .button {
+    flex: 1 1 calc(50% - 10px); /* Les boutons prennent 50% de l'écran en mode mobile */
+  }
+
+  .tokenomics-content {
+    margin-top: 50px; /* Espace supplémentaire pour petits écrans */
+  }
+}
+
+.tokenomics-section {
+  background-color: #fff8e1; /* Light yellow */
+  padding: 20px;
+  margin: 90px auto; /* Augmentez la valeur ici pour descendre la section */
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tokenomics-section .back-button {
+  position: absolute;
+  top: 10px; /* Distance depuis le haut de la page */
+  left: 50%; /* Positionnement horizontal au centre */
+  transform: translateX(-50%); /* Ajustement pour centrer */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff5722; /* Rouge */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  z-index: 10; /* Assure qu'il est au-dessus des autres éléments */
+}
+
+.tokenomics-section .back-button:hover {
+  background-color: #e64a19; /* Rouge foncé au survol */
+}
+
+.button-container a {
+  display: inline-block; /* Pour s'assurer que les boutons sont des blocs alignés */
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 150px; /* Largeur fixe pour uniformiser */
+  height: 50px; /* Hauteur fixe pour uniformiser */
+  line-height: 50px; /* Pour centrer verticalement */
+}
+
+.button-container a:hover {
+  background-color: #e64a19;
+}
+
+/* Pour s'assurer que les boutons restent responsifs sur les écrans plus petits */
+@media (max-width: 768px) {
+  .button-container a {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    height: auto; /* Ajuste la hauteur */
+    line-height: normal; /* Ajuste le centrage vertical */
+  }
+}
+
+.shibaguette-story {
+  background-color: #fff8e1; /* Couleur douce pour le fond */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shibaguette-story h2 {
+  color: #ff8c00; /* Orange vif */
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.shibaguette-story p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
