@@ -110,15 +110,12 @@ const cityMemes = {
       description: 'Departing for their honeymoon adventure across France, their love story continues to inspire.'
     },
   ],
-};
-
   lyon: [],
   marseille: [],
   nice: [],
   toulouse: [],
   bordeaux: [],
 };
-
 
 // Variables pour la gestion de la galerie
 let currentCity = '';
@@ -132,10 +129,12 @@ function showGallery(city) {
   const galleryModal = document.getElementById('gallery-modal');
   const galleryImage = document.getElementById('gallery-image');
   const galleryMessage = document.getElementById('gallery-message');
+  const galleryDescription = document.getElementById('gallery-description'); // Pour les descriptions
 
   if (!memes || memes.length === 0) {
     // Affiche un message si aucun mème n'est disponible
     galleryImage.style.display = 'none';
+    galleryDescription.style.display = 'none';
     galleryMessage.style.display = 'block';
     galleryMessage.textContent = '🚧 Stay Tuned: This journey starts soon !';
     galleryModal.style.display = 'flex';
@@ -146,15 +145,20 @@ function showGallery(city) {
   currentIndex = 0;
   galleryMessage.style.display = 'none';
   galleryImage.style.display = 'block';
+  galleryDescription.style.display = 'block';
   updateGalleryImage();
   galleryModal.style.display = 'flex';
 }
 
-// Fonction pour mettre à jour l'image affichée
+// Fonction pour mettre à jour l'image et la description affichées
 function updateGalleryImage() {
   const memes = cityMemes[currentCity];
   const galleryImage = document.getElementById('gallery-image');
-  galleryImage.src = memes[currentIndex];
+  const galleryDescription = document.getElementById('gallery-description'); // Pour les descriptions
+
+  const currentMeme = memes[currentIndex]; // Obtenir l'objet image + description
+  galleryImage.src = currentMeme.url; // Met à jour l'image
+  galleryDescription.textContent = currentMeme.description; // Met à jour la description
 }
 
 // Fonction pour naviguer vers l'image précédente
@@ -176,8 +180,7 @@ function closeGallery() {
   document.getElementById('gallery-modal').style.display = 'none';
 }
 
-
-
+// Gestionnaire d'événements pour le formulaire
 document.getElementById('newsletter-form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -220,4 +223,3 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
     document.getElementById('newsletter-form').reset();
   }
 });
-
